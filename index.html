@@ -460,7 +460,7 @@ footer { min-height: 110px; padding: 24px max(18px, calc((100vw - var(--max)) / 
       <button class="icon-button" id="themeButton" type="button" data-i18n-title="themeToggle" data-i18n-aria-label="themeToggle">◐</button>
       <button class="lang-button" id="langButton" type="button" aria-label="English">EN</button>
       <button class="icon-button" id="settingsButton" type="button" data-i18n-title="settings" data-i18n-aria-label="settings">⚙</button>
-      <a class="header-download" id="headerApkLink" href="#download"><span data-i18n="downloadQuick">Bản demo Android</span></a>
+      <a class="header-download" id="headerApkLink" href="https://github.com/duongthaovycute/VieRad3.3/releases/download/v3.8.0/VieRad.apk" target="_blank" rel="noopener"><span data-i18n="downloadQuick">Bản demo Android</span></a>
     </div>
   </header>
 
@@ -472,7 +472,7 @@ footer { min-height: 110px; padding: 24px max(18px, calc((100vw - var(--max)) / 
         <p data-i18n="heroText">VieRad theo dõi suất liều bức xạ, CPS, CPM và tổng số đếm theo thời gian thực. Dữ liệu được trình bày rõ ràng và không tự chèn số mẫu khi API mất kết nối.</p>
         <div class="hero-actions">
           <a href="#monitor" class="primary-button"><span data-i18n="viewLive">Xem dữ liệu trực tiếp</span><span>→</span></a>
-          <a href="#download" class="secondary-button" id="heroDownloadLink"><span data-i18n="downloadQuick">Bản demo Android</span></a>
+          <a href="https://github.com/duongthaovycute/VieRad3.3/releases/download/v3.8.0/VieRad.apk" target="_blank" rel="noopener" class="secondary-button" id="heroDownloadLink"><span data-i18n="downloadQuick">Bản demo Android</span></a>
         </div>
         <div class="trust-row">
           <div><b id="refreshCycleValue">5s</b><span data-i18n="refreshCycle">Chu kỳ cập nhật</span></div>
@@ -674,7 +674,7 @@ footer { min-height: 110px; padding: 24px max(18px, calc((100vw - var(--max)) / 
               <small data-i18n="internalDemo">BẢN DEMO NỘI BỘ</small>
               <h3 data-i18n="demoTitle">VieRad Android Demo</h3>
               <p data-i18n="demoText">Dùng để cài thử, kiểm tra bảng số liệu, lịch sử, cảnh báo và giao diện song ngữ.</p>
-              <a id="downloadApkLink" href="downloads/VieRad-current.apk" download class="primary-button"><span>↓</span><span data-i18n="downloadButton">Tải về</span></a>
+              <a id="downloadApkLink" href="https://github.com/duongthaovycute/VieRad3.3/releases/download/v3.8.0/VieRad.apk" download target="_blank" rel="noopener" class="primary-button"><span>↓</span><span data-i18n="downloadButton">Tải về</span></a>
             </article>
             <article class="download-option disabled">
               <small data-i18n="officialSoon">SẮP RA MẮT</small>
@@ -819,8 +819,8 @@ window.VIERAD_CONFIG = {
     warning: 1.0,
     danger: 4.0
   },
-  apkPath: "",
-  apkVersion: "web-only",
+  apkPath: "https://github.com/duongthaovycute/VieRad3.3/releases/download/v3.8.0/VieRad.apk",
+  apkVersion: "3.8.0",
   developer: "Dương Thảo Vy",
   organization: "HCMUS"
 };
@@ -853,8 +853,8 @@ window.VIERAD_CONFIG = {
     apiTimeoutSeconds: 3,
     maxHistoryPoints: 50,
     thresholds: { caution: 0.5, warning: 1, danger: 4 },
-    apkPath: '',
-    apkVersion: 'web-only',
+    apkPath: 'https://github.com/duongthaovycute/VieRad3.3/releases/download/v3.8.0/VieRad.apk',
+    apkVersion: '3.8.0',
     developer: 'Dương Thảo Vy',
     organization: 'HCMUS'
   });
@@ -1509,6 +1509,8 @@ window.VIERAD_CONFIG = {
     setText('developerName', config.developer);
     setText('organizationName', config.organization);
     setHref('downloadApkLink', config.apkPath);
+    setHref('headerApkLink', config.apkPath);
+    setHref('heroDownloadLink', config.apkPath);
   }
 
 
